@@ -1,0 +1,13 @@
+
+  <input type="text" name="todolist" [(ngModel)] = "this.element.task" [value]="this.element.newitem" >&nbsp;
+  <input type="date" [(ngModel)] = "this.element.date" [value]="this.element.newitem">&nbsp;
+  <button (click)="add()" >Add</button>&nbsp;
+  <button (click)="update()" >Update</button>
+ 
+  <hr>
+  
+  <p *ngFor="let items of this.element.list;index as i" > {{ i }}:{{ items.task }} {{items.date}}&nbsp;&nbsp;
+  <button (click)="edit(i,items)"  style="margin-top:-10px;">Edit</button>&nbsp;
+  <button (click)="delete(i)"  style="margin-top:-10px;">Delete</button>
+  </p>
+
